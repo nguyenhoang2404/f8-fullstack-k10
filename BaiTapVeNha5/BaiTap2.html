@@ -4,8 +4,103 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        .app{
+            margin-top:20px;
+            margin:0 4px;
+        }
+        p{
+            display:none;
+        }
+        [class="fa-solid fa-minus"]{
+            display:none;
+        }
+        input{
+            display: none;
+        }
+        input:checked ~ p{
+            display:block;
+        }
+        input:checked ~ [class="fa-solid fa-minus"]{
+            display:inline-block;
+        }
+        input:checked ~ [class="fa-solid fa-plus"]{
+            display:none;
+        }
+        label{
+            color:white;
+            height:40px;
+            line-height: 40px;
+            margin:0 4px;
+        }
+        .accordion, .accordion-2, .accordion-3{
+            position: relative;
+        }
+        .accordion::after, .accordion-2::after, .accordion-3::after{
+            content: "";
+            display:block;
+            position: absolute;
+            top:0;
+            width:100%;
+            height:40px;
+            background-color: #d95925;
+            z-index:-99;
+        }
+        p{
+            margin-bottom:12px;
+        }
+    </style>
 </head>
 <body>
-    
+    <div class="app">
+        <div class="accordion">
+                <input type="radio" id="random" name="colors">
+                <label for="random" class="fa-solid fa-plus"></label>
+                <label for="random" class="fa-solid fa-minus"></label>
+                <label for="random" class="title">How to set random colors?</label>
+            <p>
+                To set random colors: <br>
+                1) Add <strong>jag-faq-random-colors</strong> class. <br>
+                2) To change color, open theme{num}.css, find "jaq-faq-random-colors", <br>
+                3) You can change color from here. <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolore, sint quaerat laudantium fugit reiciendis quos, 
+                veniam repellendus possimus ducimus sequi officia temporibus explicabo excepturi quod cupiditate officiis doloremque provident.
+            </p>
+        </div>
+        <div class="accordion-2">
+            <input type="radio" id="theme" name="colors">
+            <label for="theme" class="fa-solid fa-plus"></label>
+            <label for="theme" class="fa-solid fa-minus"></label>
+            <label for="theme" class="title">How to use theme colors and add new theme color?</label>
+            <p>
+                To set random colors: <br>
+                1) Add <strong>jag-faq-random-colors</strong> class. <br>
+                2) To change color, open theme{num}.css, find "jaq-faq-random-colors", <br>
+                3) You can change color from here. <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolore, sint quaerat laudantium fugit reiciendis quos, 
+                veniam repellendus possimus ducimus sequi officia temporibus explicabo excepturi quod cupiditate officiis doloremque provident.
+            </p>
+        </div>
+        <div class="accordion-3">
+            <input type="radio" id="change" name="colors">
+            <label for="change" class="fa-solid fa-plus"></label>
+            <label for="change" class="fa-solid fa-minus"></label>
+            <label for="change" class="title">How to change icon?</label>
+            <p>
+                To set random colors: <br>
+                1) Add <strong>jag-faq-random-colors</strong> class. <br>
+                2) To change color, open theme{num}.css, find "jaq-faq-random-colors", <br>
+                3) You can change color from here. <br>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil, dolore, sint quaerat laudantium fugit reiciendis quos, 
+                veniam repellendus possimus ducimus sequi officia temporibus explicabo excepturi quod cupiditate officiis doloremque provident.
+            </p>
+        </div>
+    </div>
 </body>
 </html>

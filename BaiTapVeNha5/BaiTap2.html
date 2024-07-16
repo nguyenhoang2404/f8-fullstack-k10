@@ -21,9 +21,6 @@
         [class="fa-solid fa-minus"]{
             display:none;
         }
-        input{
-            display: none;
-        }
         input:checked ~ p{
             display:block;
         }
@@ -38,6 +35,11 @@
             height:40px;
             line-height: 40px;
             margin:0 4px;
+            cursor: pointer;
+            user-select: none;
+        }
+        input{
+            display: none;
         }
         .accordion, .accordion-2, .accordion-3{
             position: relative;
@@ -60,7 +62,7 @@
 <body>
     <div class="app">
         <div class="accordion">
-                <input type="radio" id="random" name="colors">
+                <input type="checkbox" id="random" name="colors">
                 <label for="random" class="fa-solid fa-plus"></label>
                 <label for="random" class="fa-solid fa-minus"></label>
                 <label for="random" class="title">How to set random colors?</label>
@@ -74,7 +76,7 @@
             </p>
         </div>
         <div class="accordion-2">
-            <input type="radio" id="theme" name="colors">
+            <input type="checkbox" id="theme" name="colors">
             <label for="theme" class="fa-solid fa-plus"></label>
             <label for="theme" class="fa-solid fa-minus"></label>
             <label for="theme" class="title">How to use theme colors and add new theme color?</label>
@@ -88,7 +90,7 @@
             </p>
         </div>
         <div class="accordion-3">
-            <input type="radio" id="change" name="colors">
+            <input type="checkbox" id="change" name="colors">
             <label for="change" class="fa-solid fa-plus"></label>
             <label for="change" class="fa-solid fa-minus"></label>
             <label for="change" class="title">How to change icon?</label>

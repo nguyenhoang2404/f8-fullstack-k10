@@ -15,10 +15,15 @@
         }
         body{
             font-family: "Lato", sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
         .app{
             margin:20px;
-            max-width:600px;
+            max-width:700px;
+            border:1px solid black;
+            padding:20px;
         }
         h2{
             font-family: "Lobster", sans-serif;
@@ -97,6 +102,7 @@
             position: absolute;
             top:-60px;
             left:60px;
+            animation: slideDown linear 0.3s forwards;
         }
         .form-input:focus ~ p::after{
             content:"";
@@ -107,6 +113,17 @@
             position:absolute;
             top:100%;
             left:30px;
+            animation: slideDown linear 0.3s forwards;
+        }
+        @keyframes slideDown {
+            from{
+                transform: translateY(-4px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
         }
         .form-input:focus, .form-input:hover{
             border:2px solid black;

@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hey there</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Lato", sans-serif;
+        }
+        .app{
+            margin:20px;
+            max-width:600px;
+        }
+        h2{
+            font-family: "Lobster", sans-serif;
+            font-size:50px;
+            font-weight: 300;
+            color:#333333;
+        }
+        .desciprtion{
+            margin-top:24px;
+            color:#bebebe;
+        }
+        form{
+            margin-top:20px;
+        }
+        .form-control{
+            width:610px;
+            height:46px;
+            border:1px solid #e2e2e2;
+            margin-bottom:20px;
+            position:relative;
+        }
+        .form-input{
+            width:100%;
+            height:100%;
+            outline:none;
+            border:none;
+            padding-left:60px;
+        }
+        .subject{
+            width:100%;
+            height:100%;
+            border:none;
+            padding-left:60px;
+        }
+        textarea{
+            height:100%;
+            width: 100%;
+            border:none;
+            padding-left:60px;
+        }
+        i{
+            position: absolute;
+        }
+        i[class~="fa-user"], i[class~="fa-envelope"], i[class~="fa-mobile-screen-button"], i[class~="fa-folder-open"], i[class~="fa-message"]{
+            left:0;
+            top:50%;
+            transform: translateY(-50%);
+            font-size:20px;
+            width:50px;
+            height:100%;
+            background-color: #dcdcdc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color:white;
+        }
+        i[class~="fa-star"]{
+            right:12px;
+            top:50%;
+            transform: translateY(-50%);
+            font-size:12px;
+            color:#b9bbc9;
+            position: absolute;
+        }
+        p{
+            display:none;
+        }
+        .form-input:focus ~ p{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            width:170px;
+            height:40px;
+            color:white;
+            background-color: #333333;
+            position: absolute;
+            top:-60px;
+            left:60px;
+        }
+        .form-input:focus ~ p::after{
+            content:"";
+            display:block;
+            width:1px;
+            border:12px solid;
+            border-color:#333333 transparent transparent transparent;
+            position:absolute;
+            top:100%;
+            left:30px;
+        }
+        .form-input:focus, .form-input:hover{
+            border:2px solid black;
+        }
+        .form-input:focus ~ i[class~="fa-regular"], 
+        .form-input:focus ~ i[class~="fa-solid"]
+        {
+            color:white;
+            background-color: black;
+        }
+        .form-input:hover ~ i[class~="fa-regular"], 
+        .form-input:hover ~ i[class~="fa-solid"]{
+            color:white;
+            background-color: black;
+        }
+        .form-input:focus ~ i[class~="fa-star"], .form-input:hover ~ i[class~="fa-star"]{
+            color: black;
+            background-color: unset;
+        }
+        input[type="checkbox"]{
+            border:2px solid #dddddd;
+        }
+        .submit{
+            display: flex;
+            justify-content: space-between;
+        }
+        .container {
+            display: block;
+            position: relative;
+            padding-left: 35px;
+            margin-bottom: 12px;
+            cursor: pointer;
+            font-size: 16px;
+            color:#686868;
+        }
+        .container input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+            height: 0;
+            width: 0;
+        }
+        .checkmark {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 25px;
+            width: 25px;
+            border:2px solid #dddddd;
+        }
+        .container:hover input ~ .checkmark {
+              background-color: #ccc;
+        }
+        .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+        }
+        .container input:checked ~ .checkmark:after {
+            display: block;
+        }
+        .container .checkmark:after {
+            left: 9px;
+            top: 5px;
+            width: 4px;
+            height: 8px;
+            border: solid black;
+            border-width: 0 3px 3px 0;
+            -webkit-transform: rotate(45deg);
+            -ms-transform: rotate(45deg);
+            transform: rotate(45deg);
+        }
+        .btn-submit{
+            width:120px;
+            padding:12px;
+            color:white;
+            background-color: #ec5247;
+            border:none;
+            outline: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition:all linear 0.3s;
+        }
+        .btn-submit:hover{
+            opacity:0.7;
+            border-radius:99px;
+            transition:all linear 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h2>Hey there</h2>
+        <h3 class="desciprtion">
+             <span style="color:#ec5247">
+                We'd like to hear from you.
+             </span>Send us your message or just say hy with our <br>
+             contact form or directly via phone, we love to chat
+        </h3>
+        <form action="">
+            <div class="form-control">
+                <input type="text" name="name" id="name" class="form-input" placeholder="Your name">
+                <p>Enter your name</p>
+                <i class="fa-regular fa-user"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>  
+            <div class="form-control">
+                <input type="text" name="email" id="email" class="form-input" placeholder="your@domain.com">
+                <p>Enter your mail</p>
+                <i class="fa-regular fa-envelope"></i>
+                <i class="fa-regular fa-star"></i>
+            </div>
+            <div class="form-control">
+                <input type="text" name="telephone" id="telephone" class="form-input" placeholder="+44 00 123">
+                <p>Enter your telephone</p>
+                <i class="fa-solid fa-mobile-screen-button"></i>
+            </div>
+            <div class="form-control">
+                    <select name="subject" id="subject" class="form-input">
+                        <option value="subject">Subject</option>
+                        <option value="hello">hello</option>
+                        <option value="hi">hi</option>
+                    </select>
+                    <p>Enter your subject</p>
+                    <i class="fa-solid fa-folder-open"></i>
+            </div>
+            <div class="form-control" style="height:240px">
+                <!-- <fieldset> -->
+                    <textarea name="message" id="message" placeholder="Message" class="form-input"></textarea>
+                    <p>Enter your Message</p>
+                    <i class="fa-regular fa-envelope"></i>
+                    <i class="fa-solid fa-message"></i>
+                <!-- </fieldset> -->
+            </div>
+            <div class="submit">
+                <label class="container">
+                    <input type="checkbox" checked="checked">
+                    <span class="checkmark"></span>
+                        Send me a copy of this message
+                </label>
+                <input type="submit" class="btn-submit" value="SEND">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Asap", sans-serif;
+        }
+        .profile-cover {
+            width:100%;
+        }
+        .profile{
+            position:relative;
+        }
+        .profile-info {
+            position: absolute;
+            top:70%;
+            left:100px;
+            color:white;
+            display: flex;
+        }
+        .profile-img {
+            border-radius: 4px;
+        }
+        .profile-info-name {
+            margin:16px 12px;
+            
+        }
+        .profile-info-name h3 {
+            font-size:20px;
+        }
+        .profile-info-name-description {
+            margin-top:12px;
+            font-size:12px;
+        }
+        .profile-info-name-description span {
+            font-size:18px;
+            font-weight:600;
+            margin-left:2px;
+        }
+        nav {
+            width:100%;
+            height:40px;
+            line-height:40px;
+            background-color: #fff;
+        }
+        .profile-menu {
+            list-style: none;
+            padding:0;
+            margin:0;
+            display: flex;
+            position:absolute;
+            right:0;
+        }
+        .profile-menu-links {
+            text-decoration: none;
+            margin:0 25px;
+            font-size:16px;
+            font-weight:600;
+            color:black;
+            position: relative;
+            display: block;
+        }
+        .profile-menu-links:hover {
+            color:#dd5e56;
+            transition: 0.3s;
+        }
+        /* .profile-menu-links:hover span{
+            display: block;
+            position: absolute;
+            top:110%;
+            left:0; 
+            width:100%;
+            height:4px;
+            background-color: #dd5e56;
+        } */
+        .profile-menu-links:hover::after {
+            content:"";
+            display: block;
+            position: absolute;
+            top:110%;
+            left:0; 
+            width:0;
+            height:4px;
+            background-color: #dd5e56;
+            animation:toRight linear 0.2s forwards;
+        }
+        @keyframes toRight {
+            to{
+                width:100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="profile">
+        <img src="./imgs/HCMcity.jpg" class="profile-cover"></img>
+        <div class="profile-info">
+            <img src="./imgs/profile-avatar.PNG" alt="" class="profile-img">
+            <div class="profile-info-name">
+                <h3>TẬP ĐOÀN VINGROUP</h3>
+                <p class="profile-info-name-description">
+                    NĂM THÀNH LẬP: <span style="margin-right:12px">1993</span>DỰ ÁN ĐÃ ĐẦU TƯ:<span>35</span></p>
+                </p>
+            </div>
+        </div>
+        <nav>
+            <ul class="profile-menu">
+                <li><a class="profile-menu-links" href="#">GIỚI THIỆU<span></span></a></li>
+                <li><a class="profile-menu-links" href="#">DỰ ÁN ĐÃ ĐẦU TƯ<span></span></a></li>
+                <li><a class="profile-menu-links" href="#">LIÊN HỆ<span></span></a></li>
+            </ul>
+        </nav>
+    </div>
+</body>
+</html>

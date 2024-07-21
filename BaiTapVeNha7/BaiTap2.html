@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <style>
+        /* Ảnh nền: http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg
+        Màu Heading: #272323
+        Màu chữ: #717171 */
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Nunito Sans", sans-serif;
+            height: 100vh;
+            overflow: hidden;
+            background-image: url('./imgs/login-bg2.jpg');
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .app{
+            margin:0 auto;
+            width:800px;
+            height:400px;
+            display: flex;  
+            border-radius: 16px;  
+        }
+        .app-log{
+            width:40%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #ff574d;
+            padding:0 16px;
+            border-top-left-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        .log-title{
+            margin-top:60px;
+            font-size:26px;
+            color:#fff;
+        }
+        .log-title span{
+            padding:2px 4px;
+            background-color: white;
+            color:#ff574d;
+            border-radius: 4px;
+        }
+        .log-description{
+            margin-top:16px;
+            text-align: center;
+            font-weight: 500;
+            font-size:16px;
+            color:#fff;
+        }
+        .log-read-more{
+            margin-top:20px;
+            text-decoration: none;
+            color:#ff574d;
+            padding:8px 24px;
+            background-color: white;
+            border-radius: 4px;
+            font-weight: 600;
+        }
+        .log-socials{
+            list-style: none;
+            padding:0;
+            display: flex;
+            margin:32px;
+        }
+        .log-socials-links{
+            text-decoration: none;
+            display: block;
+            background-color: #db5c4f;
+            color:white;
+            width:30px;
+            height:30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin:0 12px;
+            border-radius:4px;
+        }
+        .log-socials-links:hover{
+            opacity:0.7;
+            transition: 0.3s;
+        }
+        .app-account{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            flex: 1;
+            background-color: white;
+            border-top-right-radius: 12px;
+            border-bottom-right-radius: 12px;
+        }
+        .account-title{
+            margin:40px 0 16px 0;
+            color:#272323;
+        }
+        .account-title span{
+            color:#ec685f;
+            position: relative;
+        }
+        .account-title span::after{
+            content:"";
+            display: block;
+            position: absolute;
+            top:140%;
+            left:0;
+            width:55px;
+            height:1px;
+            background-color: #ff574d;
+        }
+        form{
+            width:80%;
+        }
+        .form-control{
+            margin:24px 0;
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .account-input{
+            width:100%;
+            height:30px;
+            padding:16px;
+            border:none;
+            outline: none;
+            box-shadow: 0px 0px 2px 1px rgba(0, 0, 0, 0.2);
+        }
+        .account-forgot,  .account-register a{
+            text-decoration: none;
+            color:#717171;
+            font-size:14px;
+            font-weight:600;
+        }
+        .account-button{
+            width:100%;
+            color:white;
+            background-color: #ff574d;
+            outline:none;
+            border:none;
+            padding:16px 0;
+        }
+        .account-button:hover{
+            opacity: 0.7;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .account-register{
+            color:#717171;
+        }
+        .account-register a{
+            margin-left:120px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <div class="app-log">
+            <h2 class="log-title">
+                <span>JL</span>
+                Just Log
+            </h2>
+            <p class="log-description">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                Ducimus quisquam placeat eveniet illo quo nemo. 
+            </p>
+            <a href="#" class="log-read-more">Read more</a>
+            <ul class="log-socials">
+                <li><a href="#" class="log-socials-links"><i class="fa-brands fa-facebook-f"></i></a></li>
+                <li><a href="#" class="log-socials-links"><i class="fa-brands fa-twitter"></i></a></li>
+                <li><a href="#" class="log-socials-links"><i class="fa-brands fa-google-plus-g"></i></a></li>
+                <li><a href="#" class="log-socials-links"><i class="fa-brands fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+        <div class="app-account">
+            <h2 class="account-title">Login to <span>your account</span></h2>
+            <form action="post">
+                <div class="form-control">
+                    <input class="account-input" type="email" name="email" placeholder="Email address" id="email">
+                </div>
+                <div class="form-control">
+                    <input class="account-input" type="password" name="password" placeholder="Password" id="password">
+                </div>
+                <div class="form-control">
+                    <label for="remember">
+                        <input type="checkbox" name="remember" id="remember">
+                        <span style="color:#717171; font-size:16px; margin-left:2px">Remember me</span>
+                    </label>
+                    <a href="#" class="account-forgot">Forgot Password</a>
+                </div>
+                <div class="form-control">
+                    <input type="submit" value="LOGIN" class="account-button">
+                </div>
+                <div class="form-control">
+                    <p class="account-register">Don't have an account? <a href="#">Register here</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

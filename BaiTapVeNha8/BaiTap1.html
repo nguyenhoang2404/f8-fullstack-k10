@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+       body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        width: 100vw;
+        overflow: hidden;
+        font-family: "Asap", sans-serif;
+       }
+       .app {
+         margin:0 auto;
+       }
+        /* Font chữ: Asap
+        Font chữ giá: SFU
+        Ảnh banner: https://cdn.houseviet.vn/images/project/23042023/ha-noi-melody-residences-cover.jpg */
+        .banner {
+            position:relative;
+        }
+        .banner__box {
+                position: absolute;
+                top:50%;
+                left:360px;
+                transform: translateY(-50%);  
+                background-color: rgba(255, 255, 255, 0.7);   
+                padding:20px;         
+        }
+        .banner__box-title {
+            color:#bf4240;
+        }
+        .banner__box-description {
+            color:#3f3424;
+            margin:16px 0;
+            line-height:1.6;
+            font-size:16px;
+        }
+        .banner__box-location {
+            color:#3f3424;
+            display: flex;
+        }
+        .banner__box-location p {
+            margin-left:4px;
+        }
+        .banner__box-price {
+            position:absolute;
+            top:80%;
+            right:28px;
+            padding:16px;
+            background-color: #bf4240;
+            font-size:20px;
+            font-weight:600;
+            color:white;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <img src="./imgs/ha-noi-melody-residences-cover.jpg" alt="banner" class="banner">
+        <div class="banner__box">
+            <h2 class="banner__box-title">Ha Noi Melody Residences</h2>
+            <p class="banner__box-description">
+                Dự án Ha Noi Melody Residences tọa lạc ngay Trung tâm khu đô thị mới Linh Đàm<br>
+                Dự án có quy mô 3.28ha, dự kiến cung ứng ra thị trường 1.875 căn hộ cao cấp
+            </p>
+            <div class="banner__box-location">
+                <i class="fa-solid fa-location-dot"></i>
+                <p>Quận Hoàng Mai, Hà Nội</p>
+            </div>
+            <span class="banner__box-price">3,2 TỶ/CĂN</span>
+        </div>
+    </div>
+</body>
+</html>

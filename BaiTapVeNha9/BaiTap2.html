@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        :root{
+            --text-color:#333;
+        }
+        body {
+            font-family: "Roboto", sans-serif;
+            display:flex;
+        }
+        .app {
+            width:80%;
+            margin:auto;
+        }
+        .card-menu
+        {
+            list-style: none;
+            display: flex; 
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .card-menu-items
+        {
+            width:32%;
+            margin:12px 0;
+            position:relative;
+            border:2px solid #f1f1f4;
+        }
+        .card-menu-links
+        {
+            text-decoration: none;
+            display: block;
+            color:var(--text-color);
+            margin:40px 30px;
+            padding:12px;
+            border:2px solid transparent;
+        }
+        .card-icon {
+            font-size:32px;
+        }   
+        .card-title {
+            margin-top:30px
+        }
+        .card-description {
+            margin-top:12px;
+            color:#c2bfc2;
+        }
+        .card-more {
+            text-decoration: none;
+            font-weight:600;
+            font-size:12px;
+            color:var(--text-color);
+            opacity: 0;
+        }
+        .card-more i {
+            margin-left:8px;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            color:black;
+            background-color: transparent;
+            border:1px solid #ead8d5;
+            display:inline-flex;
+            justify-content: center;
+            align-items: center;
+            transition: 0.3s;
+        }
+        .card-menu-items:nth-child(1):hover {
+            background:url('./imgs/bacsibenhnhan.png');
+        }
+        .card-menu-items:nth-child(2):hover {
+            background: url('./imgs/business.jfif');
+        }
+        .card-menu-items:nth-child(3):hover {
+            background: url('./imgs/worker.jfif') center center/cover no-repeat;
+        }
+        .card-menu-items:nth-child(4):hover {
+            background: url('./imgs/shakeHand.jpg') center center/cover no-repeat;
+        }
+        .card-menu-items:nth-child(5):hover {
+            background: url('./imgs/canbang.png') center center/cover no-repeat;
+        }
+        .card-menu-items:nth-child(6):hover {
+            background: url('./imgs/catch.jfif') center center/cover no-repeat;
+        }
+        .card-menu-items:hover .card-menu-links{
+            border:2px solid white;
+        }
+        .card-menu-items:hover::before {
+            content:"";
+            display: block;
+            width:100%;
+            height:100%;
+            position:absolute;
+            background-color: rgba(149, 105, 90, 0.8);
+        }
+        .card-menu-items:hover .card-icon {
+            animation: disappear ease 0.3s forwards;
+        }
+        .card-menu-items:hover .card-title {
+            color:white;
+            animation: slideUp ease 0.6s forwards;
+        }
+        .card-menu-items:hover .card-description {
+            color:white;
+            animation: slideUp ease 0.9s forwards;
+        }
+        .card-menu-items:hover .card-more {
+            color:white;
+            display: inline-block;
+            animation: appear ease 0.7s forwards;
+        }
+        .card-more:hover i {
+            background-color: #ead8d5;
+            transition: 0.3s;
+        }
+        @keyframes disappear {
+            to{
+                transform: scale(0);
+                opacity: 0;
+            }
+        }
+        @keyframes slideUp {
+            to{
+                transform:translateY(-60px);
+            }
+        }
+        @keyframes appear {
+            from{
+                transform: translateY(30px);
+                opacity: 0;
+            }
+            to{
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <ul class="card-menu">
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-building-columns"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-suitcase"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-gavel"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-handshake"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-scale-balanced"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+            <li class="card-menu-items">
+                <a href="#" class="card-menu-links">
+                    <i class="card-icon fa-solid fa-handcuffs"></i>
+                    <h3 class="card-title">This is war, and in war the <br> only crime is too lose</h3>
+                    <p class="card-description">
+                        Lorem ipsum dolor, sit amet consectetur <br> 
+                        adipisicing elit. Sapiente,aut numquam.
+                    </p>
+                    <span href="#" class="card-more">Learn more<i class="fa-solid fa-arrow-right"></i></span>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

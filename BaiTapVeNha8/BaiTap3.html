@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KHU VỰC BẤT ĐỘNG SẢN</title>
+    <link href="https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: "Asap", sans-serif;
+            display: flex;
+        }
+        .app {
+            width:80%;
+            margin:0 auto;
+        }
+        .realEstate-title {
+            margin-top:16px;
+        }
+        .realEstate-menu {
+            list-style: none;
+            display: flex;
+            margin:12px 0;
+        }
+        .realEstate-menu-links {
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            margin-right: 24px;
+            padding:8px 16px;
+            border-radius:99px;
+            color:black;
+            background-color: #e5e5e5;
+            font-weight:600;
+        }
+        .realEstate-menu-links:hover {
+            background-color: #af7b38;
+            color:white;
+            transition: 0.3s;
+        }
+        .realEstate-menu-links span {
+            font-size:12px;
+            font-weight: 500;
+            margin-top:4px;
+            font-style: italic;
+        }
+        .place-menu {
+            padding:0;
+            margin-top:16px;
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .place-menu li {
+            flex-basis: 30%;
+            margin-right: 16px;
+            margin-bottom:12px;
+        }
+        .place-menu-links {
+            display: block;
+            text-decoration: none;
+            color:#fff;
+            position: relative;
+        }
+        .place-menu-links h3, .place-menu-links p {
+            position: absolute;
+            left:12px;
+            top:20px ;
+        }
+        .place-menu-links p {
+            top:80%;
+        }
+        .place-menu-links img {
+            width:100%;
+            height:240px;
+            object-fit: cover;
+            object-position: center;
+            border-radius:6px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <h3 class="realEstate-title">KHÁM PHÁ KHU VỰC BẤT ĐỘNG SẢN</h3>
+        <ul class="realEstate-menu">
+            <li><a href="#" class="realEstate-menu-links">Hồ Chí Minh <span>50.315 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Hà Nội <span>18.767 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Bình Dương <span>7.051 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Đồng Nai <span>4.251 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Bà Rịa Vũng Tàu <span>3.968 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Đà Nẵng <span>3.680 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Long An <span>2.835 bất động sản</span> </a></li>
+            <li><a href="#" class="realEstate-menu-links">Quảng Ninh <span>2.490 bất động sản</span> </a></li>
+        </ul>
+        <ul class="place-menu">
+            <li>
+                <a href="#" class="place-menu-links"> 
+                    <img src="./imgs/Q2.jpg" alt="place"> 
+                    <h3>Quận 2</h3>
+                    <p>4.186 bất động sản đang bán</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="place-menu-links"> 
+                    <img src="./imgs/Q7.jpg" alt="place"> 
+                    <h3>Quận 7</h3>
+                    <p>4.664 bất động sản đang bán</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="place-menu-links"> 
+                    <img src="./imgs/Q9.jpg" alt="place"> 
+                    <h3>Quận 9</h3>
+                    <p>3.702 bất động sản đang bán</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="place-menu-links"> 
+                    <img src="./imgs/QTB.jpg" alt="place"> 
+                    <h3>Quận Tân Bình</h3>
+                    <p>3.062 bất động sản đang bán</p>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="place-menu-links"> 
+                    <img src="./imgs/QTD.jpg" alt="place"> 
+                    <h3>Thành phố Thủ Đức</h3>
+                    <p>2.843 bất động sản đang bán</p>
+                </a>
+            </li>
+            <li>
+                <a href="" class="place-menu-links"> 
+                    <img src="./imgs/HBC.jpg" alt="place"> 
+                    <h3>Huyện Bình Chánh</h3>
+                    <p>3.235 bất động sản đang bán</p>
+                </a>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

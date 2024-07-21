@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Space+Grotesk:wght@300..700&display=swap" rel="stylesheet">
+    <style>
+        /* Font Heading: Space Grotes
+        Font Text: Inter */
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            font-family: "Inter", sans-serif;
+        }
+        body{
+            width: 100vw;
+            display:flex;
+        }
+        .app{
+            display: flex;
+            justify-content: space-evenly;
+            width:80%;
+            margin:auto;
+            padding:40px 0;
+        }
+        .menu{
+            list-style: none;
+            width:300px;
+        }
+        .menu-items{
+            text-align: right;
+            position: relative;
+            margin-bottom:60px;
+        }
+        .menu-items::after{
+            content:"";
+            display: block;
+            width:10px;
+            height:10px;
+            border-radius: 50%;
+            background-color: #4aa394;
+            position: absolute;
+            left:108%;
+            top:0;
+            border:10px solid rgba(236, 245, 243, 1);
+        }
+        .menu-items::before{
+            content: "";
+            display: block;
+            width: 2px;
+            height: 100%;
+            border-radius: 50%;
+            background-color: #f6f6f8;
+            position: absolute;
+            left: 112.4%;
+            top: 43px;
+        }
+        .menu-items span{
+            position: absolute;
+            top:4px;
+            left:108%;
+            display: inline-block;
+            font-size:14px;
+            font-weight:600;
+            width:120px;
+            color:#8f8f92;
+        }
+        .menu-items-description{
+            margin-top:8px;
+            color:#8f8f92;
+        }
+        .menu-items-button{
+            text-decoration: none;
+            display: inline-block;
+            margin-top: 12px;
+            font-size:12px;
+            font-weight: 700;
+            color:#333;
+            padding:8px 12px;
+            border-radius: 12px;
+            background-color: #f3f3f3;
+            transition: 0.3s;
+        }
+        .menu-items-button:hover{
+            background-color: #a26f5a;
+            color:white;
+            transition: 0.3s;
+        }
+        .winning-awards{
+            width: 400px;
+            object-fit: contain;
+            margin-left: 300px;
+            position: relative;
+            top: -163px;
+        }
+    </style>
+</head>
+<body>
+    <div class="app">
+        <ul class="menu">
+            <li class="menu-items">
+                <h2 class="menu-items-heading">Together We Build</h2>
+                <p class="menu-items-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                </p>
+                <a href="#" class="menu-items-button">Family Law</a>
+                <span class="times">2012-2007</span>
+            </li>
+            <li class="menu-items">
+                <h2 class="menu-items-heading">Completed 1000Cases</h2>
+                <p class="menu-items-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                </p>
+                <a href="#" class="menu-items-button">Criminal Law</a>
+                <span class="times">2016-2012</span>
+            </li>
+            <li class="menu-items">
+                <h2 class="menu-items-heading">We Are Number One</h2>
+                <p class="menu-items-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                </p>
+                <a href="#" class="menu-items-button">Business Law</a>
+                <span class="times">2018-2016</span>
+            </li>
+            <li class="menu-items">
+                <h2 class="menu-items-heading">Intellectual Property</h2>
+                <p class="menu-items-description">
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. 
+                </p>
+                <a href="#" class="menu-items-button">Car Accident</a>
+                <span class="times">2022-2018</span>
+            </li>
+        </ul>
+        <img class="winning-awards" src="./imgs/Capture.PNG" alt="">
+    </div>
+</body>
+</html>

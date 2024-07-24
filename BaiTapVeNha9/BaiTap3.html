@@ -28,7 +28,7 @@
             align-items: center;
             border:1px solid black;
             padding:0 20px;
-            background-color: #fbfbfb;
+            background-color: #f8f8f8;
         }
         .app-title {
             font-size:32px;
@@ -42,43 +42,94 @@
             margin-top:12px;
         }
         .form-field {
-            display: flex;
+            margin-top:20px;
+            display:flex;
             flex-wrap: wrap;
             justify-content: space-between;
-            margin-top:16px;
         }
         .form-control {
-            width:46%;
-            position: relative;
+            width:48%;
+            height:40px;
             margin:12px 0;
+            position:relative;
         }
-        .form-label{
-            position:absolute;
-            left:12px;
-            top:50%;
-            transform:translateY(-50%);
-        }
-        .form-input{
+        .form-input {
             width:100%;
-            border:1px solid #eff1f4;
-            height:50px;
-            padding:12px;
-            border-radius:12px;
+            height:100%;
+            padding-top:26px;
+            padding-left:16px;
+            padding-bottom:12px;
             outline:none;
+            border:1px solid #f7f4f7;
+            border-radius:4px;
+        }
+        select.form-input{
+            padding:0 12px;  
+        }
+        .form-label {
+            position:absolute; 
+            top:14px;
+            left:16px;
+            color:#777;
+            transition:0.3s;
         }
         .form-message {
-            width:100%;
-            border:none;
-            outline: none;
-            resize:none;
-            border:1px solid #eff1f4;
             height:400px;
+            width:100%;
+            border:1px solid #e9e8ea;
             padding:12px;
-            font-family: "Roboto";
+            outline:none;
+            resize:none;
+            color:#777;
         }
         .form-submit {
-
+            margin:20px 0;
+            padding:12px 16px;
+            color:white;
+            background-color: #5278d8;
+            outline:none;
+            border:none;
+            border-radius:99px;
+            cursor: pointer;
+            transition:0.3s;
         }
+        .form-submit:hover {
+            transition:0.3s;
+            cursor: pointer;
+            opacity:0.7;
+        }
+        .form-control:nth-child(4){
+            background-color: white;
+        }
+        .form-input:focus ~ .form-label {
+            animation: miniText ease 0.3s forwards;
+        }
+        .form-input:not(:focus) ~ .form-label {
+            animation: scaleText ease 0.3s forwards;
+        }
+        .form-input:focus {
+            border-color:#d3d0d8;
+            background-color: #edf0ff;
+        }
+        @keyframes miniText {
+            to{
+                transform: scale(0.8) ;
+                top:0;
+                left:8px;
+            }
+        }
+        @keyframes scaleText{
+            from{
+                transform: scale(0.8) ;
+                top:0;
+                left:8px;
+            }
+            to{
+                transform: scale(1);
+                top:12px;
+            }
+        }
+        
     </style>
 </head>
 <body>
@@ -88,30 +139,28 @@
             <p class="app-description">Reach out to us from our contact form and we will get back to you softly</p>
             <div class="form-field">
                 <div class="form-control">
-                    <label for="name" class="form-label">First Name *</label>
                     <input type="text" class="form-input" name="fname" id="fname">
+                    <label for="fname" class="form-label">First Name *</label>
                 </div>
                 <div class="form-control">
-                    <label for="name" class="form-label">Last Name *</label>
                     <input type="text" class="form-input" name="lname" id="lname">
+                    <label for="lname" class="form-label">Last Name *</label>
                 </div>
                 <div class="form-control">
-                    <label for="email" class="form-label">Email *</label>
                     <input type="text" class="form-input" name="email" id="email">
+                    <label for="email" class="form-label">Email Name *</label>
                 </div>
                 <div class="form-control">
-                    <label for="name" class="form-label">
-                        <select name="sales" id="sales">
+                        <select name="sales" id="sales" class="form-input">
+                            <option value="Department">Select a Department</option>
                             <option value="Sales">Sales</option>
                             <option value="Marketing">Marketing</option>
-                            <option value="Customer">Sales</option>
+                            <option value="Customer">Customer support</option>
                         </select>
-                    </label>
-                    <input type="text" class="form-input" name="sales" id="sales">
-                    <i class="fa-solid fa-caret-down"></i>
+                        <label for="name" class="form-label"></label>
                 </div>
             </div>
-            <textarea class="form-message" name="message" id="message" placeholder="Message *"></textarea>
+            <textarea class="form-message" name="message" id="message">Message *</textarea> 
             <input type="submit" value="Send message" class="form-submit">
         </form>
     </div>

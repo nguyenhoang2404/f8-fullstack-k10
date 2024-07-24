@@ -7,36 +7,35 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <style>
-        *{
+        * {
             padding:0;
             margin:0;
             box-sizing: border-box;
         }
-        body{
+        body {
             display: flex;
             font-family: "Open Sans", sans-serif;
         
         }
-        nav{
+        nav {
             display: flex;
             justify-content: space-between;
             width:100%;
             margin:60px 100px;
             border:1px solid #c2c2c2;
-            
             /* #f7f7f7 */
         }
-        .nav__menu-list{
+        .nav__menu-list {
             list-style: none;
             padding:0;
             margin:0;
             display: flex;
         }
-        .nav__menu-items{
+        .nav__menu-items {
             border-right:1px solid #c2c2c2;
             position: relative;
         }
-        .nav__menu-links{
+        .nav__menu-links {
             display:block;
             text-decoration: none;
             height:40px;
@@ -47,11 +46,11 @@
             font-size:14px;
             transition:0.3s;
         }
-        .nav__menu-links:hover{
-            background-color: #54a2d4;
+        .nav__menu-links:hover {
+            background-color: #2da5da;
             transition:0.3s;
         }
-        .second__menu-list{
+        .second__menu-list {
             list-style: none;
             padding:0;
             margin:0;
@@ -62,10 +61,10 @@
             display:none;
             animation: slideDown linear 0.3s;
         }
-        .nav__menu-items:hover .second__menu-list{
+        .nav__menu-items:hover .second__menu-list {
             display:block;
         }
-        @keyframes slideDown{
+        @keyframes slideDown {
             from{
                 transform: translateY(-4px);
                 opacity:0.8;
@@ -75,7 +74,7 @@
                 opacity:1;
             }
         }
-        .second__menu-list::after{
+        .second__menu-list::after {
             content:"";
             display:block;
             width:1px;
@@ -85,7 +84,17 @@
             left:20px;
             border-color:transparent transparent white transparent;
         }
-        .second__menu-links{
+        .second__menu-list::before {
+            content:"";
+            display: block;
+            width:100%;
+            height:40px;
+            background-color: transparent;
+            position:absolute;
+            bottom:100%;
+            left:0;
+        }
+        .second__menu-links {
             background-color: white;
             text-decoration: none;
             display: block;
@@ -93,13 +102,18 @@
             font-size:14px;
             color:#666;
             padding:12px;
+            margin:2px;
             display: flex;
             border-bottom:1px solid #f2f2f2;
         }
-        .second__menu-links i{
+        .second__menu-links:hover {
+            background-color: #2da5da;
+            transition:0.3s;
+        }
+        .second__menu-links i {
             margin-right:12px;
         }
-        .nav__contact{
+        .nav__contact {
             line-height:40px;
             padding:0 12px;
             cursor: pointer;
@@ -107,7 +121,7 @@
             position:relative;
             color:#666;
         }
-        .nav__contact::before{
+        .nav__contact::before {
             content: "";
             display: block;
             position: absolute;
@@ -117,11 +131,11 @@
             width: 1px;
             background-color: #c2c2c2;
         }
-        .nav__contact:hover{
+        .nav__contact:hover {
             background-color: #54a2d4;
             transition: 0.3s;
         }
-        .nav__contact i{
+        .nav__contact i {
             margin-right:4px;
         }
     </style>

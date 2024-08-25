@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
     <!-- Landing page -->
@@ -15,12 +16,12 @@
             <!-- Landing info -->
             <input type="checkbox" name="landing-button" id="landing-button" hidden>       
             <div class="landing-info">
-                <svg class="icon-logo-vikinger">
+                <svg class="icon-logo-vikinger tablet-d-none">
                     <use xlink:href="#svg-logo-vikinger"></use>
                 </svg>
                 <h2 class="landing-welcome">Welcome to</h2>
                 <h1 class="landing-title">VIKINGER</h1>
-                <p class="landing-description">
+                <p class="landing-description tablet-d-none">
                     The next generation social network & community! <br>
                     Connect with your friends and play with our quests <br>
                     and badges gamification system!
@@ -34,7 +35,7 @@
 
             <div class="landing-form">
                 <div class="landing-login">
-                    <img src="./imgs/rocket.webp" alt="" class="landing-rocket-img">
+                    <img src="./imgs/rocket.webp" alt="" class="landing-rocket-img tablet-mobile-d-none">
                     <h2 class="form-title">Account Login</h2>
                     <form action="">
                         <div class="form-control">
@@ -65,7 +66,7 @@
                     </ul>
                 </div>
                 <div class="landing-register">
-                    <img src="./imgs/rocket.webp" alt="" class="landing-rocket-img">
+                    <img src="./imgs/rocket.webp" alt="" class="landing-rocket-img tablet-mobile-d-none">
                     <h2 class="register-title">Create your Account !</h2>
                     <form action="" class="register-form">
                         <div class="form-control">
@@ -90,7 +91,7 @@
                         </div>
                         <input type="submit" value="Register now !" class="register-button">
                         <p class="register-desciprtion">
-                            You'll receive a confirmation email in your inbox with a link to <br>
+                            You'll receive a confirmation email in your inbox with a link to 
                             activate your account. If you have any problems.
                             <a href="#" class="register-contact">Contact us</a>! 
                         </p>
@@ -98,7 +99,6 @@
                 </div>
             </div>
         </div>
-
         <div class="svg">
             <svg style="display: none;">
                 <symbol id="svg-logo-vikinger" viewBox="0 0 28 40" preserveAspectRatio="xMinYMin meet">

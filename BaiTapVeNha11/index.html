@@ -5,32 +5,303 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grover</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/root.css">
     <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
     <div class="app">
-            <header>
-                <nav>
-                    <img src="./imgs/logo-header.svg" alt="" class="nav-logo">
-                    <ul class="nav-menu">
-                        <li class="nav-menu-items"><a href="#" class="nav-menu-links active">Home</a></li>
-                        <li class="nav-menu-items"><a href="#" class="nav-menu-links">Menu</a></li>
-                        <li class="nav-menu-items"><a href="#" class="nav-menu-links">Service</a></li>
-                        <li class="nav-menu-items"><a href="#" class="nav-menu-links">Shop</a></li>
-                    </ul>
-                    <div class="nav-search">
-                        <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
-                        <input type="text" class="nav-search-input" placeholder="search">
-                        <div class="nav-cart">
-                            <i class="fa-solid fa-bag-shopping"></i>
+                <header>
+                    <div class="container">
+                        <input type="checkbox" id="menu-bars" hidden>
+                        <nav>
+                            <img src="./imgs/logo-header.svg" alt="" class="nav-logo">
+                            <ul class="nav-menu tablet-d-none">
+                                <li class="nav-menu-items"><a href="#" class="nav-menu-links active">Home</a></li>
+                                <li class="nav-menu-items"><a href="#" class="nav-menu-links">Menu</a></li>
+                                <li class="nav-menu-items"><a href="#" class="nav-menu-links">Service</a></li>
+                                <li class="nav-menu-items"><a href="#" class="nav-menu-links">Shop</a></li>
+                            </ul>
+                            <div class="nav-search tablet-d-none">
+                                <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+                                <input type="text" class="nav-search-input" placeholder="search">
+                                <div class="nav-cart">
+                                    <i class="fa-solid fa-bag-shopping"></i>
+                                </div>
+                            </div>
+                            <label for="menu-bars" class="tablet-menu-button d-none tablet-d-block">
+                                <i class="fa-solid fa-bars"></i>
+                            </label>             
+                        </nav>
+                        <div class="tablet-menu d-none tablet-d-block">
+                            <ul class="tablet-list">
+                                <li class="tablet-list-items"><a href="#" class="tablet-list-links active">Home</a></li>
+                                <li class="tablet-list-items"><a href="#" class="tablet-list-links">Menu</a></li>
+                                <li class="tablet-list-items"><a href="#" class="tablet-list-links">Service</a></li>
+                                <li class="tablet-list-items"><a href="#" class="tablet-list-links">Shop</a></li>
+                            </ul>
+                            <div class="nav-search-wrapper">
+                                <div class="nav-search">
+                                    <i class="fa-solid fa-magnifying-glass nav-search-icon"></i>
+                                    <input type="text" class="nav-search-input" placeholder="search">
+                                    <div class="nav-cart">
+                                        <i class="fa-solid fa-bag-shopping"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="header-slider">
+                                <div class="row">
+                                    <div class="col-lg-6">
+                                        <div class="header-slider-left">
+                                            <div class="header-faster">
+                                                    <p>
+                                                        More than Faster
+                                                    </p>
+                                                    <img src="./imgs/strawberry.svg" alt="">
+                                            </div>  
+                                            <h1 class="header-title">
+                                                Groceries delivered in as little as <span>2 hours</span>
+                                            </h1>
+                                            <p class="header-description">
+                                                Grocen atssures fresh grocery every morning to your family without getting out in this pandemic.
+                                            </p>
+                                            <div class="header-buttons">
+                                                <button class="feature-btn">Order now</button>
+                                                <button class="play-btn">
+                                                    <i class="fa-solid fa-play"></i>
+                                                </button>
+                                                <a href="#" class="order-process-btn">Order Process</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-6">
+                                        <div class="header-slider-right">
+                                            <img src="./imgs/header-img.png" alt="">
+                                        </div>
+                                    </div>
+                                </div>
                         </div>
                     </div>
-                </nav>
-                <div class="header-ads">
-                    
-                </div>
-            </header>
+                </header>
+                <section class="serve-section pink-background">
+                    <div class="container">
+                        <div class="serve-section-wrapper">
+                            <h3 class="serve-title">What we Serve</h3>
+                            <h2 class="serve-description">
+                                fruit and vegetable delivered <br>
+                                 to your home
+                                 
+                            </h2>
+                            <div class="serve-box">
+                                
+                                <div class="serve-boxes-wrapper">
+                                    <div class="phu"></div>
+                                    <div class="serve-boxes">
+                                        <img src="./imgs/serve-box-img.svg" class="serve-image" alt="">
+                                        <h3 class="serve-box-title">Free shipping</h3>
+                                        <p class="serve-box-description">
+                                            Enjoy Order in a hand using the <br>
+                                             fresness of groceries
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="serve-boxes-wrapper">
+                                    <div class="phu"></div>
+                                    <div class="serve-boxes">
+                                        <img src="./imgs/serve-box-img2.svg" class="serve-image" alt="">
+                                        <h3 class="serve-box-title">Free shipping</h3>
+                                        <p class="serve-box-description">
+                                            Order in a handy way using the <br>
+                                            freshness of the groceries.
+                                        </p>
+                                    </div>
+                                </div>
+                                <div class="serve-boxes-wrapper">
+                                    <div class="phu"></div>
+                                    <div class="serve-boxes">
+                                        <img src="./imgs/service-ic3.svg" class="serve-image" alt="">
+                                        <h3 class="serve-box-title">Free shipping</h3>
+                                        <p class="serve-box-description">
+                                            If you get rotten items - return <br>
+                                             immediately to us.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>                    
+                    </div>
+                </section>
+                <section class="choose-us">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="content-img">
+                                        <img src="./imgs/choose.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">         
+                                    <div class="content-content">
+                                        <h3 class="content-title-before">WHY CHOOSE US</h3>  
+                                        <h2 class="content-title">
+                                            Find Favorites And <br>
+                                            Discover New Ones
+                                        </h2>
+                                        <p class="content-description">
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus blanditiis praesen voluptatum deleniti.
+                                        </p>
+                                        <button class="content-btn feature-btn">
+                                            Explore Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="home-delivery home-delivery-tablet">
+                    <div class="container">
+                        <div class="content-wrapper">    
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6 tablet-d-none">
+                                    <div class="content-content">
+                                        <h3 class="content-title-before" style="color:#F9BA45">HOME DELIVERY</h3>  
+                                        <h2 class="content-title">
+                                            Sit at Home We Will Take <br> 
+                                             Care Your Order
+                                        </h2>
+                                        <p class="content-description">
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
+                                        </p>
+                                        <button class="content-btn feature-btn">
+                                            Explore Now
+                                        </button>
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="content-img">
+                                        <img src="./imgs/bikedelivery.png" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 d-none tablet-d-block">
+                                    <div class="content-content">
+                                        <h3 class="content-title-before" style="color:#F9BA45">HOME DELIVERY</h3>  
+                                        <h2 class="content-title">
+                                            Sit at Home We Will Take <br> 
+                                             Care Your Order
+                                        </h2>
+                                        <p class="content-description">
+                                            At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos
+                                        </p>
+                                        <button class="content-btn feature-btn">
+                                            Explore Now
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>                    
+                        </div>
+                    </div>
+                </section>
+                <section class="serve-section pink-background">
+                    <div class="container">
+                        <div class="content-wrapper">
+                            <div class="row">
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="content-img">
+                                        <img src="./imgs/mobile.svg" alt="" style="width:300px">
+                                    </div>
+                                </div>
+                                <div class="col-md-12 col-lg-6">
+                                    <div class="content-content">
+                                        <h3 class="content-title-before" style="color:#F54748; text-transform: unset;">Download our app</h3>  
+                                        <h2 class="content-title">
+                                            Get the Groceries app <br>
+                                            order more easily.
+                                        </h2>
+                                        <p class="content-description">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut.
+                                        </p>
+                                        <div class="dowload-btns">
+                                            <button class="apple-btn">
+                                                <img src="./imgs/apple.svg" alt="">
+                                                <p>
+                                                    App Store
+                                                </p>
+                                            </button>
+                                            <button class="apple-btn">
+                                                <img src="./imgs/playstore.svg" alt="">
+                                                <p>
+                                                    Play Store
+                                                </p>
+                                            </button>
+        
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <div class="container">
+                        <div class="footer-top">
+                            <div class="row">
+                                <div class="col-lg-3 col-md-12 mt-md-4">
+                                    <div class="footer-logo">
+                                        <img src="./imgs/logo-header.svg" alt="">
+                                    </div>
+                                    <p class="footer-description">
+                                        Fast delivery, which is active all over 
+                                         the world, serves with many 
+                                         transportation vehicles.
+                                    </p>    
+                                </div>
+                                <div class="col-lg-3 col-md-12 mt-md-4">
+                                    <h3 class="footer-title">Company</h3>
+                                    <ul class="footer-menu">
+                                        <li><a class="footer-menu-links" href="#">About us</a></li>
+                                        <li><a class="footer-menu-links" href="#">Blog</a></li>
+                                        <li><a class="footer-menu-links" href="#">All Products</a></li>
+                                        <li><a class="footer-menu-links" href="#">Location Map</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-12 mt-md-4">
+                                    <h3 class="footer-title">Services</h3>
+                                    <ul class="footer-menu">
+                                        <li><a class="footer-menu-links" href="#">Order tracking</a></li>
+                                        <li><a class="footer-menu-links" href="#">Wish List</a></li>
+                                        <li><a class="footer-menu-links" href="#">My account</a></li>
+                                        <li><a class="footer-menu-links" href="#">Terms & Conditions</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-lg-3 col-md-12 mt-md-4">
+                                    <h3 class="footer-title">Get in Touch</h3>
+                                    <p class="footer-description">
+                                        Subscribe to our weekly
+                                        Newsletter and receive 
+                                        updates via email.
+                                    </p>
+                                </div>
+                        </div>
+                        </div>
+                        <div class="footer-bottom">
+                            <div class="footer-bottom-left">
+                                <p>
+                                    All Rights Reserved @ BESNIK 2021
+                                </p>
+                            </div>
+                            <div class="footer-bottom-right">
+                                <a class="footer-bottom-right-links" href="#">Terms & Conditions</a>
+                                <a class="footer-bottom-right-links" href="#">Privacy & Policy</a>
+                            </div>
+                           
+                        </div>
+                </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

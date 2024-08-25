@@ -1,0 +1,55 @@
+@media screen and (max-width:768px)
+{
+    .tablet-d-none {
+        display:none !important;
+    }
+    .landing-page {
+        display: flex;
+        flex-direction: column;
+        overflow: hidden;
+    }
+    .landing-welcome {
+        margin-top:16px;
+    }
+    .landing-register {
+        transform: translateX(20%);
+        margin-top:-60px;
+    }
+}
+
+@media screen and (max-width:540px) 
+{
+    .landing-welcome {
+        margin-top:70px;
+        font-weight:500;
+    }
+    .landing-title {
+        font-size:3.75rem;
+    }
+    .landing-login  {
+        width:400px;
+    }
+    .landing-register {
+        width:360px;
+        height:630px;
+    }
+    .register-desciprtion {
+        margin-top:10px;
+        width:100%;
+    }
+}
+
+@media screen and (max-width:1024px) 
+{ 
+    .tablet-mobile-d-none {
+        display:none;
+    }
+    .landing-page {
+        display: flex;
+        flex-direction: column;
+    }
+    .landing-form {
+        position:relative;
+        top:-20px;
+    }
+}

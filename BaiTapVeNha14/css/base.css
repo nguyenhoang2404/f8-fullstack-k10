@@ -17,4 +17,12 @@ button {
     outline:none;
     border:none;
 }
+.primary-button {
+    padding:8px 12px;
+    border-radius:20px;
+    color:#3d3730;
+    background-color: var(--primary-color) ;
+    border:none;
+    outline:none;
+}
 

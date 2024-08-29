@@ -539,7 +539,6 @@ form {
 .footer__bottom {
     background-color: #222;
     padding-top:40px;
-    display: inline-block;
 }
 .footer-logo {
     display: flex;

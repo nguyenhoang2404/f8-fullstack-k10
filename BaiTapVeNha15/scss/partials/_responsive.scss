@@ -1,0 +1,100 @@
+@use 'variable' as *;
+@media screen and (max-width:1024px)
+{
+    :root {
+        --container-width: 710px;
+        --column-space:20px;
+        --container-padding:0;
+      }
+      .container {
+        max-width: var(--container-width);
+        margin-inline: auto;
+        padding: 0 var(--container-padding);
+      }
+    .tablet-d-block {
+        display:block;
+    }
+    .tablet-d-none {
+        display:none;
+    }
+    header {
+        box-shadow: unset;
+    }
+    .nav {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding-left:0;
+        padding-right:0;
+        .tablet__menu-btn {
+            font-size:20px;
+            color:$white-color;
+            cursor: pointer;
+            display: block;
+        }
+        .tablet__menu {
+            position: absolute;
+            top:100%;
+            width:100%;
+            height:0;
+            transition:0.4s;
+            overflow-y: hidden;
+        }
+        .tablet__menu-items {
+            text-align: center;
+        }
+        .tablet__menu-links {
+            font-size:14px;
+            width:100%;
+            padding:10px 0;
+            background-color: #d5c6dd;
+            color:$white-color;
+            font-weight:600;
+        }
+        .tablet__menu-links:hover {
+            color:$primary-color;
+        }
+        input[name="tablet__menu-toggle"]:checked ~ ul.tablet__menu {
+            height:350px;
+        }
+    }
+   
+}
+@media screen and (max-width:768px)
+{
+    .mobile-d-none {
+        display: none;
+    }
+    .mobile-d-block {
+        display: block;
+    }
+    :root {
+        --container-width: 1080px;
+        --column-space:20px;
+        --container-padding:20px;
+      }
+      .container {
+        max-width: var(--container-width);
+        margin-inline: auto;
+        padding: 0 var(--container-padding);
+      }
+    body {
+        overflow-x: hidden;
+    }
+    header {
+        position: fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index:99;
+        box-shadow: 1px 2px rgb(0, 0, 0, 0.1);
+    }
+}
+@media screen and (max-width:576px) {
+    .sm-d-none {
+        display: none !important;
+    }
+    .sm-d-block {
+        display: block !important;
+    }
+}

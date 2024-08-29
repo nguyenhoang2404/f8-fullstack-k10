@@ -1,0 +1,129 @@
+@media(max-width:768px)
+{
+    :root {
+        --container-padding:12px;
+    }
+    .tablet-d-none {
+        display: none;
+    }
+    .tablet-d-block {
+        display: block;
+    }
+    .tablet-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .tablet-menu i {
+        font-size:24px;
+        color:white;
+    }
+    .header-wrapper {
+        position:relative;
+    }
+    .header-logo {
+        position: relative;
+        left:80px;
+    }
+    .header-logo h3 {
+        font-size:22px;
+        color:var(--white-color);
+    }
+    .header-book {
+        margin-left:120px;
+    }
+    .header-switch i {
+        font-size:18px;
+        color:var(--primary-color);
+    }
+    .menu-bar {
+        position: absolute;
+        top:100%;
+        width:100%;
+        list-style: none;
+        height:0;
+        background-color: #222222;
+        transition:height ease-in-out .3s;
+        overflow-y: hidden;
+    }
+    .menu-bar-links {
+        display: block;
+        padding:16px;
+        color:var(--white-color);
+    }
+    .menu-bar-links:hover {
+        color:var(--primary-color);
+    }
+    #menu-bar:checked ~ .menu-bar {
+        height:340px ;
+    }
+    /* banner */
+    .banner-info-title {
+        font-size:60px;
+    }
+}
+
+@media (max-width:576px) {
+    .primary-button {
+        color:var(--black-color);
+        padding:2px 8px;
+        font-size:16px;
+        background-color: var(--primary-color);
+        border-radius:99px;
+        border:2px solid transparent;
+        text-align: center;
+    }
+    header {
+        width:100vw;
+    }
+    .header-logo {
+        left:0px;
+    }
+    .header-wrapper {
+        padding-left:unset;
+        padding-right:unset;
+    }
+    .header-book {
+        margin-left:20px;
+    }
+    .banner-info-name {
+        font-size:18px;
+    }
+    .banner-info-title {
+        font-size:30px;
+    }
+    .banner-info-description {
+        font-size:14px;
+        line-height:1.2;
+    }
+    .banner-endow {
+        display: flex;
+        flex-direction: column;
+    }
+    .banner-endow-left h3 {
+        font-size:26px;
+    }
+    .form-input {
+        width:100%;
+    }
+    .evalute-btn {
+        padding:8px 12px;
+    }
+    .footer-title {
+        font-size:18px;
+        margin-top:20px;
+    }
+    .footer__news {
+        width:100%;
+    }
+    .footer-register {
+        width:100px;
+        padding:8px 6px;
+    }
+    .footet-author {
+        border-top:0.6px solid #fff;
+    }
+    .footet-author h3 {
+        font-size:16px;
+    }
+}
